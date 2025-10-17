@@ -1,0 +1,10 @@
+# Configuration globale commune à tous les microservices
+spring:
+  application:
+    name: global-config
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
