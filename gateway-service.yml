@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: client-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/clients/**
+        - id: facture-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/factures/**
+        - id: paiement-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/paiements/**
+        - id: notification-service
+          uri: http://localhost:8084
+          predicates:
+            - Path=/notifications/**
