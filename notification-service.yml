@@ -1,0 +1,15 @@
+server:
+  port: 8084
+
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: tonemail@gmail.com
+    password: ton_motdepasse
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
